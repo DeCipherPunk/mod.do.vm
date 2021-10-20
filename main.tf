@@ -1,5 +1,7 @@
+
 resource "digitalocean_droplet" "vm" {
   name     = "${var.vm_name}"
+  count = "${var.vm_count}"
   size     = "${var.vm_size}"
   image    = "${var.vm_image}"
   region   = "${var.vm_region}"

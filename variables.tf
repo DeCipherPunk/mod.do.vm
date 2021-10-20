@@ -1,3 +1,8 @@
+variable "vm_count"{
+    decription = "number of vm's to be created"
+    type = number
+    default = 1
+}
 variable "vm_name"{
     decription = "Name of the virtual machine"
     type = string
