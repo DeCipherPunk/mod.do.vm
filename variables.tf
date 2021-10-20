@@ -68,3 +68,10 @@ variable "vm_boostrap_data"{
     description = "Bootstrap data for vm"
     type = string
 }
+
+
+# refer to https://github.com/terraform-digitalocean-modules/terraform-digitalocean-droplet/blob/master/variables.tf#L150
+variable "number_format" {
+  description = "The number format used to output."
+  default     = "%02d"
+}
