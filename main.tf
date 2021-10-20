@@ -1,6 +1,6 @@
 
 resource "digitalocean_droplet" "vm" {
-  name     = format("%s-%s", var.vm_name, format(var.vm_number_format, count.index + 1))
+  name     = format("%s-%s", var.vm_name, format(var.number_format, count.index + 1))
   count = "${var.vm_count}"
   size     = "${var.vm_size}"
   image    = "${var.vm_image}"
