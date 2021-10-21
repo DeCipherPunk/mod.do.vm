@@ -1,4 +1,14 @@
-
+terraform {
+    required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+      version = "~> 2.0"
+    }
+  }
+}
+ provider "digitalocean" {
+    token = "${var.do_token}"
+ }
 resource "digitalocean_droplet" "vm" {
   name     = format("%s-%s", var.vm_name, format(var.number_format, count.index + 1))
   count = "${var.vm_count}"
