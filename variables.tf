@@ -67,7 +67,7 @@ variable "stack_tags"{
 
 variable "vm_bootstrap_data"{
     description = "Bootstrap data for vm"
-    type = string
+    type = null
 }
 
 
