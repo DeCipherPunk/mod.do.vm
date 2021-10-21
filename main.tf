@@ -21,6 +21,6 @@ resource "digitalocean_droplet" "vm" {
   monitoring = "${var.vm_monitoring}"
   ipv6 = "${var.vm_ipv6}"
   resize_disk = "${var.vm_resize_disk}"
-  user_data = "${vm_boostrap_data}"
+  user_data = "${vm_bootstrap_data}"
   tags = "${stack_tags}"
 }
